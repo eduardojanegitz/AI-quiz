@@ -1,7 +1,6 @@
-import Image from 'next/image'
+import { Button } from "@/components/ui/button";
+import { prisma } from "@/lib/db";
 
 export default function Home() {
-  return (
-   <h1>helo world</h1>
-  )
+  return <Button>Hello</Button>;
 }
