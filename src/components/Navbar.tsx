@@ -3,6 +3,7 @@ import React from "react";
 import SignInButton from "./SignInButton";
 import { getAuthSession } from "@/lib/nextauth";
 import UserAccountNav from "./UserAccountNav";
+import { ThemeToogle } from "./ThemeToogle";
 
 type Props = {};
 
@@ -17,12 +18,15 @@ const Navbar = async (props: Props) => {
           </p>
         </Link>
 
-        <div className="flex items-center">
-          {session?.user ? (
-            <UserAccountNav user={session.user}/>
-          ) : (
-            <SignInButton text="Fazer login" />
-          )}
+        <div className="flex items-right">
+          <ThemeToogle className="mr-4"/>
+          <div className="flex items-center">
+            {session?.user ? (
+              <UserAccountNav user={session.user} />
+            ) : (
+              <SignInButton text="Fazer login" />
+            )}
+          </div>
         </div>
       </div>
     </div>
