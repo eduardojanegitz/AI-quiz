@@ -1,5 +1,11 @@
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
 
 type Props = {};
 
@@ -13,8 +19,8 @@ const RecentActivities = (props: Props) => {
         <CardDescription>Você já jogou x vezes</CardDescription>
       </CardHeader>
 
-      <CardContent className="max-h-[580px] overflow-scroll">
-    Historicos
+      <CardContent className="max-h-[580px] overflow-y-scroll">
+        Historicos
       </CardContent>
     </Card>
   );
